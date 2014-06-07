@@ -1,1 +1,5 @@
-<h1>Hi!</h1>
+<h1>Home Finder</h1>
+
+<% if @home %>
+  <h3>Title: <%= @home.short_address %> - <%= @home.rent %></h3>
+<% end %>

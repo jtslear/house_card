@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
+gem 'nokogiri'
+gem 'pry'
+gem 'httparty'
