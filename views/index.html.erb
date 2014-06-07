@@ -3,6 +3,7 @@
 <% if @home %>
   <h3><%= @home.short_address %> - <%= @home.rent %></h3>
   <ul>
+    <li><%= @home.site %></li>
     <% @home.formatted_facts.each do |fact| %>
       <li><%= fact %></li>
     <% end %>
