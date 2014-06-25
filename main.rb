@@ -9,20 +9,23 @@ def herb(template, options={}, locals={})
 end
 
 
-MIRANDA_WORK = "109 Ridge St, Knightdale, NC 27545"
-JASON_WORK = "213 Fayetville St, Raleigh, NC 27601"
-CHURCH = "3500 Spring Forest Rd, Raleigh, NC 27616"
+JOHN= "5313 Echo Ridge Road Raleigh, NC 27612"
+WORK="8521 Six Forks Rd Raleigh, NC 27615"
+CHIPOTLE_1="6102 Falls of Neuse Rdi Raleigh, NC 27609"
+CHIPOTLE_2="6602 Glenwood Ave Raleigh, NC 27612"
 
 get '/' do
   if params[:site]
     @home = ZillowHome.new(params[:site])
     address = @home.address
-    mirandas_work_finder = DistanceFinder.new(address, MIRANDA_WORK)
-    jasons_work_finder = DistanceFinder.new(address, JASON_WORK)
-    church_finder = DistanceFinder.new(address, CHURCH)
-    @miranda_time = mirandas_work_finder.time
-    @jason_time = jasons_work_finder.time
-    @church_time = church_finder.time
+    john = DistanceFinder.new(address, JOHN)
+    work = DistanceFinder.new(address, WORK)
+    chipotle_1 = DistanceFinder.new(address, CHIPOTLE_1)
+    chipotle_2 = DistanceFinder.new(address, CHIPOTLE_2)
+    @john_time = john.time
+    @work_time = work.time
+    @chipotle_1_time = chipotle_1.time
+    @chipotle_2_time = chipotle_2.time
   end
 
   herb :index
