@@ -7,17 +7,31 @@
     <% @home.formatted_facts.each do |fact| %>
       <li><%= fact %></li>
     <% end %>
-
-    <li>John: <%= @john_time %></li>
-    <li>Work: <%= @work_time %></li>
-    <li>Chipotle 1: <%= @chipotle_1_time %></li>
-    <li>Chipotle 2: <%= @chipotle_2_time %></li>
-    <li>Whole Foods: <%= @whole_foods_time %></li>
-    <li>Jo-Ann: <%= @joann_time %></li>
-    <li>PetCo 1: <%= @petco_1_time %></li>
-    <li>PetCo 2: <%= @petco_2_time %></li>
-    <li>Unleashed: <%= @unleashed_time %></li>
   </u>
+  <table>
+  <tr>
+    <td>John</td>
+    <td>Work</td>
+    <td>Chipotle 1</td>
+    <td>Chipotle 2</td>
+    <td>Whole Foods</td>
+    <td>Jo-Ann</td>
+    <td>PetCo 1</td>
+    <td>PetCo 2</td>
+    <td>Unleashed</td>
+  </tr>
+  <tr>
+    <td><%= @john_time %></td>
+    <td><%= @work_time %></td>
+    <td><%= @chipotle_1_time %></td>
+    <td><%= @chipotle_2_time %></td>
+    <td><%= @whole_foods_time %></td>
+    <td><%= @joann_time %></td>
+    <td><%= @petco_1_time %></td>
+    <td><%= @petco_2_time %></td>
+    <td><%= @unleashed_time %></td>
+  </tr>
+  </table>
 <% end %>
 
 <div>
