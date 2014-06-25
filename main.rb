@@ -13,6 +13,7 @@ JOHN= "5313 Echo Ridge Road Raleigh, NC 27612"
 WORK="8521 Six Forks Rd Raleigh, NC 27615"
 CHIPOTLE_1="6102 Falls of Neuse Rdi Raleigh, NC 27609"
 CHIPOTLE_2="6602 Glenwood Ave Raleigh, NC 27612"
+WHOLE_FOODS="8710 Six Forks Rdi Raleigh, NC 27615"
 
 get '/' do
   if params[:site]
@@ -22,10 +23,12 @@ get '/' do
     work = DistanceFinder.new(address, WORK)
     chipotle_1 = DistanceFinder.new(address, CHIPOTLE_1)
     chipotle_2 = DistanceFinder.new(address, CHIPOTLE_2)
+    whole_foods = DistanceFinder.new(address, WHOLE_FOODS)
     @john_time = john.time
     @work_time = work.time
     @chipotle_1_time = chipotle_1.time
     @chipotle_2_time = chipotle_2.time
+    @whole_foods_time = whole_foods.time
   end
 
   herb :index
