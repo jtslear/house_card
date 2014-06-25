@@ -1,3 +1,9 @@
+<style>
+  table,th,td
+  {
+  border:1px solid black;
+  }
+</style>
 <h1>Home Finder</h1>
 
 <% if @home %>
@@ -9,28 +15,28 @@
     <% end %>
   </u>
   <table>
-  <tr>
-    <td>John</td>
-    <td>Work</td>
-    <td>Chipotle 1</td>
-    <td>Chipotle 2</td>
-    <td>Whole Foods</td>
-    <td>Jo-Ann</td>
-    <td>PetCo 1</td>
-    <td>PetCo 2</td>
-    <td>Unleashed</td>
-  </tr>
-  <tr>
-    <td><%= @john_time %></td>
-    <td><%= @work_time %></td>
-    <td><%= @chipotle_1_time %></td>
-    <td><%= @chipotle_2_time %></td>
-    <td><%= @whole_foods_time %></td>
-    <td><%= @joann_time %></td>
-    <td><%= @petco_1_time %></td>
-    <td><%= @petco_2_time %></td>
-    <td><%= @unleashed_time %></td>
-  </tr>
+  <td>
+    <tr>John</tr>
+    <tr>Work</tr>
+    <tr>Chipotle 1</tr>
+    <tr>Chipotle 2</tr>
+    <tr>Whole Foods</tr>
+    <td>Jo-Ann</tr>
+    <tr>PetCo 1</tr>
+    <tr>PetCo 2</tr>
+    <tr>Unleashed</tr>
+  </td>
+  <td>
+    <tr><%= @john_time %></tr>
+    <tr><%= @work_time %></tr>
+    <tr><%= @chipotle_1_time %></tr>
+    <tr><%= @chipotle_2_time %></tr>
+    <tr><%= @whole_foods_time %></tr>
+    <tr><%= @joann_time %></tr>
+    <tr><%= @petco_1_time %></tr>
+    <tr><%= @petco_2_time %></tr>
+    <tr><%= @unleashed_time %></tr>
+  </td>
   </table>
 <% end %>
 
