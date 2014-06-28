@@ -23,19 +23,22 @@ get '/' do
   else
     @address = params[:address]
   end
-  address = @address
-  john = DistanceFinder.new(address, JOHN)
-  work = DistanceFinder.new(address, WORK)
-  whole_foods = DistanceFinder.new(address, WHOLE_FOODS)
-  joann = DistanceFinder.new(address, JOANN)
-  petco_1 = DistanceFinder.new(address, PETCO_1)
-  petco_2 = DistanceFinder.new(address, PETCO_2)
-  @john_time = john.time
-  @work_time = work.time
-  @whole_foods_time = whole_foods.time
-  @joann_time = joann.time
-  @petco_1_time = petco_1.time
-  @petco_2_time = petco_2.time
+
+  if @address
+    address = @address
+    john = DistanceFinder.new(address, JOHN)
+    work = DistanceFinder.new(address, WORK)
+    whole_foods = DistanceFinder.new(address, WHOLE_FOODS)
+    joann = DistanceFinder.new(address, JOANN)
+    petco_1 = DistanceFinder.new(address, PETCO_1)
+    petco_2 = DistanceFinder.new(address, PETCO_2)
+    @john_time = john.time
+    @work_time = work.time
+    @whole_foods_time = whole_foods.time
+    @joann_time = joann.time
+    @petco_1_time = petco_1.time
+    @petco_2_time = petco_2.time
+  end
 
   herb :index
 end

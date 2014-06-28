@@ -18,32 +18,34 @@
   <% else %>
     <h3><%= @address %></h3>
   <% end %>
-  <table>
-  <tr>
-    <td>John :-)</td>
-    <td><%= @john_time %></td>
-  </tr>
-  <tr>
-    <td>Work</td>
-    <td><%= @work_time %></td>
-  </tr>
-  <tr>
-    <td>Whole Foods</td>
-    <td><%= @whole_foods_time %></td>
-  </tr>
-  <tr>
-    <td>Jo-Ann's</td>
-    <td><%= @joann_time %></td>
-  </tr>
-  <tr>
-    <td>PetCo 1</td>
-    <td><%= @petco_1_time %></td>
-  </tr>
-  <tr>
-    <td>PetCo 2</td>
-    <td><%= @petco_2_time %></td>
-  </tr>
-  </table>
+  <% if @address %>
+    <table>
+    <tr>
+      <td>John :-)</td>
+      <td><%= @john_time %></td>
+    </tr>
+    <tr>
+      <td>Work</td>
+      <td><%= @work_time %></td>
+    </tr>
+    <tr>
+      <td>Whole Foods</td>
+      <td><%= @whole_foods_time %></td>
+    </tr>
+    <tr>
+      <td>Jo-Ann's</td>
+      <td><%= @joann_time %></td>
+    </tr>
+    <tr>
+      <td>PetCo 1</td>
+      <td><%= @petco_1_time %></td>
+    </tr>
+    <tr>
+      <td>PetCo 2</td>
+      <td><%= @petco_2_time %></td>
+    </tr>
+    </table>
+  <% end %>
 
 <div>
   <form method='GET'>
